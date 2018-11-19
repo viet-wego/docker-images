@@ -15,4 +15,5 @@ RUN gcloud components install kubectl
 
 # create k8s config directory
 USER jenkins
-RUN mkdir -p /home/jenkins/.kube/config
+RUN mkdir -p /home/jenkins/.kube
+WORKDIR /home/jenkins
