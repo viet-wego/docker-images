@@ -14,6 +14,5 @@ RUN curl https://sdk.cloud.google.com | bash && mv google-cloud-sdk /opt
 RUN gcloud components install kubectl
 
 # create k8s config directory
-USER jenkins
-RUN mkdir -p /home/jenkins/.kube
-WORKDIR /home/jenkins
+RUN mkdir -p /opt/jenkins/.kube
+ENV KUBECONFIG /opt/jenkins/.kube/config
