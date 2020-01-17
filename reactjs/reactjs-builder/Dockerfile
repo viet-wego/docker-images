@@ -1,6 +1,6 @@
-FROM node:10-alpine
+FROM node:10-alpine3.11
 LABEL maintainer="tdviet12@gmail.com"
-RUN npm install react-scripts@3.0.1 -g --silent
+RUN npm install react-scripts@3.3.0 -g --silent
 
 RUN apk add --no-cache alpine-sdk && \
     cd /tmp && \
